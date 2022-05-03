@@ -1,0 +1,399 @@
+/*menu*/
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.img {
+    align-items: left;
+}
+
+nav {
+    box-shadow: 10px 5px 5px white;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #024383;
+    height: 8vh;
+}
+
+main {
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+img {
+    float: left;
+    width: 14%;
+    border: #024383;
+    padding: 15px;
+    margin: 0px 0px 0px 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(etec\ back.png);
+    background-position: center;
+    background-size: cover;
+    top: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #b80a0a;
+    font-weight: bold;
+}
+
+
+/*carrossel*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.none {
+    display: none;
+}
+
+.opacity {
+    opacity: 0.6;
+}
+
+.carrosel-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.carrosel {
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+.carrosel img {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carrosel img:hover {
+    cursor: pointer;
+}
+
+.carrosel img:first-child {
+    transform: scaleX(-1);
+    left: 3%;
+}
+
+.carrosel img:last-child {
+    right: 3%;
+}
+
+.img1 {
+    background-image: url('Design\ sem\ nome.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img2 {
+    background-image: url('Design\ sem\ nome\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img3 {
+    background-image: url('Design\ sem\ nome\ \(2\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img4 {
+    background-image: url('Design\ sem\ nome\ \(3\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cor-texto1 {
+    color: #b80a0a;
+}
+
+.cor-texto2 {
+    color: #b80a0a;
+}
+
+.cor-texto3 {
+    color: #b80a0a;
+}
+
+.cor-texto4 {
+    color: #b80a0a;
+}
+
+.card {
+    width: 370px;
+    height: 70%;
+    text-align: justify;
+    background: white;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 10px;
+}
+
+.card h1,
+.card p {
+    padding: 15px;
+}
+
+.card h1 {
+    font-weight: 400;
+    color: #b80a0a;
+}
+
+.card a {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.element-selector {
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    width: 60px;
+    display: flex;
+}
+
+.element-selector hr {
+    margin: 10px;
+    border: 5px solid white;
+    opacity: 0.6;
+    cursor: pointer;
+    width: 70px;
+}
+
+hr.active {
+    opacity: 1;
+}
+
+.element-selector hr:hover {
+    opacity: 1;
+}
+
+@media (max-width:1024px) {
+    .card {
+        left: 50%;
+    }
+}
+
+
+/*footer*/
+
+footer {
+    bottom: 0px;
+    width: 100%;
+    background: #024383;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+h2 {
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.p footer {
+    font-family: 'Jost', sans-serif;
+    color: #000;
+}
+
+span class {
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+}
+
+.left .content p {
+    text-align: justify;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2px;
+}
+
+.left .content .social a span {
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+    background: #f12020;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
